@@ -80,7 +80,7 @@ app.delete('/api/notes/:id', (req, res) => {
     res.sendFile(path.join(__dirname, './db/db.json'));
 });
 
-// Basic route that sends the user first to the AJAX Page
+// if user navigates to anything not defined above, send them to main page
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
 
 // Starts the server to begin listening
